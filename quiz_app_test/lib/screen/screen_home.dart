@@ -1,12 +1,11 @@
-import 'package:flutter/marterial.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreentState();
+  _HomeScreentState createState() => _HomeScreentState();
 }
 
-class HomeScreenState extends State<HomeScreen> {
+class _HomeScreentState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -17,10 +16,9 @@ class HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text("My Quiz App"),
-          backgroundColor: Color.deepPurple,
+          backgroundColor: Colors.deepPurple,
           leading: Container(),
-        ), //AppBar
-
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
