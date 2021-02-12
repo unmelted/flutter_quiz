@@ -32,7 +32,8 @@ class _HomeScreentState extends State<HomeScreen> {
     double width = screenSize.width;
     double height = screenSize.height;
 
-    return SafeArea(
+    return WillPopScope(
+      onWillPop: () async => false,
       child: Scaffold(
         appBar: AppBar(
           title: Text("My Quiz App"),
