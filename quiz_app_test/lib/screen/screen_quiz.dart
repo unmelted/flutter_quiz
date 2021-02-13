@@ -69,14 +69,14 @@ class _QuizScreenState extends State<QuizScreen> {
             ),
           ),
           Container(
-            width: width * 0.08,
+            width: width * 0.8,
             padding: EdgeInsets.only(top: width * 0.012),
             child: AutoSizeText(
               quiz.title,
               textAlign: TextAlign.center,
               maxLines: 2,
               style: TextStyle(
-                fontSize: width * 0.04,
+                fontSize: width * 0.048,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -107,11 +107,12 @@ class _QuizScreenState extends State<QuizScreen> {
                       : () {
                           if (_currentIndex == widget.quizs.length - 1) {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ResultScreen(
-                                        answers: _answers,
-                                        quizs: widget.quizs)));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ResultScreen(
+                                    answers: _answers, quizs: widget.quizs),
+                              ),
+                            );
                           } else {
                             _answerState = [false, false, false, false];
                             _currentIndex += 1;
